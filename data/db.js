@@ -1,0 +1,5 @@
+const e = require('express')
+const mongoose=require('mongoose')
+mongoose.connect(process.env.URI)
+    .then(() => console.log("db conectada 😍"))
+    .catch(e => console.log("La conexion a fallado "+  e))   
