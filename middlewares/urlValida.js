@@ -11,11 +11,20 @@ const urlValidar=(req,res,next) =>{
             ) {
                 return next();
             }
+            throw new Error("la ruta debe tener https://");
         }
         throw new Error("no válida 😲");
     } catch (error) {
-        // console.log(error);
-        return res.send("Url no valida perro");
+        if(error.message==="Invalid URL")
+        {
+            req.flash("mensajes",[{msg: "Url no valida"}])
+        }
+        else
+        {
+            req.flash("mensajes",[{msg: error.message}])
+        }
+       
+        return res.redirect("/")
     }
 }
 module.exports=urlValidar

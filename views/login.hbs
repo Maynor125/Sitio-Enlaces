@@ -2,6 +2,7 @@
 <div class="row justify-content-center">
     <div class="col-md-6">
         <form class="form " action="/auth/login" method="post"> 
+        <input type="hidden" name="_csrf" value="{{csrfToken}}" />
       <input type="text" name="email" class="form-control mb-3" placeholder="ingrese email" value="maynoldemar@gmail.com">
       <input type="password" name="password" class="form-control mb-3" placeholder="ingrese contraseña" value="1234">
       <button class="btn btn-primary" type="submit">Acceder</button>

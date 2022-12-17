@@ -12,6 +12,10 @@
 <body>
     {{>nav-bar}}
     <div class="container">
+        {{#each mensajes }}
+            <div class="alert alert-dark mb-2 mt-4">{{this.msg}}</div>
+        {{/each}}
+
        {{{body}}}
     </div>
    
