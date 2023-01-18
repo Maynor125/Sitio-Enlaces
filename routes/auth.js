@@ -11,7 +11,7 @@ router.get("/register",registerForm)
 router.post("/register",[
     body("userName","Ingrese un nombre valido perro").trim().notEmpty().escape(),
     body("email","Ingrese un email valido").trim().isEmail().normalizeEmail(),
-    body("password","Contraseña de 3 caracteres minimo").trim().isLength({min:3}).escape()
+    body("password","Contraseña de 3 caracteres minimo warro").trim().isLength({min:3}).escape()
     .custom((value,{req})=>{
        if(value !== req.body.repassword)
        {

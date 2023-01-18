@@ -85,4 +85,4 @@ app.use(express.static(__dirname+"/public"))
 
 
 const PORT = process.env.PORT || 5000
-app.listen(PORT , () => console.log("Servidor andado "+ PORT));
+app.listen(PORT , () => console.log("Servidor andando "+ PORT));
